@@ -94,3 +94,7 @@ func Open(name string) (Tiff, error) {
 	}
 	return res, nil
 }
+
+func SuppressWarnings() {
+	C.TIFFSetWarningHandler(nil)
+}
